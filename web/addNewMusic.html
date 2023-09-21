@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add New Music </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>เพิ่มเพลง</h2>
+        <form action="AddNewMusicMySQL" method="post">
+            <table>
+                <tr>
+                    <th align=right>ชื่อเพลง:</th>
+                    <td><input type="text" name="musicName"></td>
+                </tr>
+                <tr>
+                    <th align=right >ศิลปิน: </th>
+                    <td><input type="text" name="artistName"></td>
+                </tr>
+                <tr>
+                    <th align=right >อัลบั้ม: </th>
+                    <td><input type="text" name="albumName"></td>
+                </tr>
+                <tr>
+                    <th align=right>แนวเพลง:</th>
+                    <td>
+                        <select name="musicType">
+                            <option value="คลาสสิก">คลาสสิก</option>
+                            <option value="ป๊อป">ป๊อป</option>
+                            <option value="แร็พ">แร็พ</option>  
+                            <option value="ฮิปฮอป">ฮิปฮอป</option>  
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="right">เนื้อหาเพลง:</th>
+                    <td>
+                        <input type="checkbox" name="lyrics" value="ความรัก">ความรัก
+                        <input type="checkbox" name="lyrics" value="ความสัมพันธ์">ความสัมพันธ์<br>
+                        <input type="checkbox" name="lyrics" value="ความสนุกสนาน">ความสนุกสนาน
+                        <input type="checkbox" name="lyrics" value="ความหวัง">ความหวัง<br>
+                    </td>
+                </tr>
+                <tr>
+                    <th align=right >วางจำหน่าย (พ.ศ.): </th>
+                    <td><input type="text" name="releaseDate"></td>
+                </tr>
+                <tr>
+                    <th  align=right>ระดับความชอบ:</th>
+                    <td>
+                        <input type="radio" name="likeLevel" value="ไม่ชอบ">ไม่ชอบ
+                        <input type="radio" name="likeLevel" value="ชอบ">ชอบ
+                        <input type="radio" name="likeLevel" value="ชอบมาก">ชอบมาก
+                    </td>
+                </tr>
+                <tr>
+                    <th  align=right>ความคิดเห็น:</th>
+                    <td><textarea name="comments" rows="3" cols="28"></textarea></td>
+                </tr>
+                <tr><td>&nbsp;</td><td><input type="submit" value="เพิ่มเพลง"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
